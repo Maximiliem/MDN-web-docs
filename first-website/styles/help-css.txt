@@ -1,0 +1,72 @@
+Anatomy of a CSS ruleset:
+p {
+    color: red;
+}
+
+
+The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts:
+
+Selector
+
+    This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <p> elements). To style a different element, change the selector.
+
+
+Declaration
+
+    This is a single rule like color: red;. It specifies which of the element's properties you want to style.
+
+
+Properties
+
+    These are features of an HTML element that you can change the values of, to make it styled differently. (In this example, color is a property of the <p> elements.) In CSS, you choose which properties you want to affect in the rule.
+
+
+Property value
+
+    To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)
+
+
+
+Note the other important parts of the syntax:
+
+    Apart from the selector, each ruleset must be wrapped in curly braces. ({})
+    Within each declaration, you must use a colon (:) to separate the property from its value or values.
+    Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.
+
+
+
+To modify multiple property values in one ruleset, write them separated by semicolons, like this:
+p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}
+
+
+Selecting multiple elements:
+You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
+
+p,
+li,
+h1 {
+  color: red;
+}
+
+
+Different types of selectors
+
+There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:
+
+Selector name 	What does it select 	Example
+
+Element selector (sometimes called a tag or type selector) 	All HTML elements of the specified type. 	p selects <p>
+
+ID selector 	The element on the page with the specified ID. On a given HTML page, each id value should be unique. 	#my-id selects <p id="my-id"> or <a id="my-id">
+
+Class selector 	The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page. 	.my-class selects <p class="my-class"> and <a class="my-class">
+
+Attribute selector 	The element(s) on the page with the specified attribute. 	img[src]
+selects <img src="my-image.png"> but not <img>
+
+Pseudo-class selector 	The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.) 	a:hover selects <a>, but only when the mouse pointer is hovering over the link. 
+
